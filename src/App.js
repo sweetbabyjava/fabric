@@ -1,24 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
+import Clock from './Clock';
+import MagicButton from './MagicButton';
+import MagicTable from './MagicTable';
+import CurrencyCalculator from './CurrencyCalculator';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <Router>
+     <Route path="/" component={Clock}/>
+     <Route path="/MagicButton" component={MagicButton}/>
+     <Route path="/MagicTable" component={MagicTable}/>
+     <Route path="/CurrencyCalculator" component={CurrencyCalculator}/>
+   </Router>
   );
 }
 
